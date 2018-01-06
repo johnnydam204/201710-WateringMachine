@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"wateringmachine\startup_stm32f103xb.o"
+"wateringmachine\system_stm32f1xx.o"
+"wateringmachine\stm32f1xx_hal_cortex.o"
+"wateringmachine\stm32f1xx_hal_tim.o"
+"wateringmachine\stm32f1xx_hal.o"
+"wateringmachine\stm32f1xx_hal_dma.o"
+"wateringmachine\stm32f1xx_hal_flash.o"
+"wateringmachine\stm32f1xx_hal_gpio_ex.o"
+"wateringmachine\stm32f1xx_hal_rcc.o"
+"wateringmachine\stm32f1xx_hal_tim_ex.o"
+"wateringmachine\stm32f1xx_hal_flash_ex.o"
+"wateringmachine\stm32f1xx_hal_gpio.o"
+"wateringmachine\stm32f1xx_hal_pwr.o"
+"wateringmachine\stm32f1xx_hal_rcc_ex.o"
+"wateringmachine\main.o"
+"wateringmachine\stm32f1xx_hal_msp.o"
+"wateringmachine\stm32f1xx_it.o"
+--library_type=microlib --strict --scatter "wateringmachine\wateringmachine.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "wateringmachine.map" -o wateringmachine\wateringmachine.axf
